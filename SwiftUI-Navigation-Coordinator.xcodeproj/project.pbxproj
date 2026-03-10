@@ -6,17 +6,45 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0490DD582F5660E800529C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DD512F5660E800529C2B /* AppDelegate.swift */; };
+		0490DD5B2F5660E800529C2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0490DD532F5660E800529C2B /* Assets.xcassets */; };
+		0490DD602F56645800529C2B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DD5F2F56645800529C2B /* ApplicationCoordinator.swift */; };
+		0490DD632F56647D00529C2B /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DD622F56647D00529C2B /* BaseCoordinator.swift */; };
+		0490DD672F567A7000529C2B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DD662F567A7000529C2B /* LoginView.swift */; };
+		0490DD942F57C09E00529C2B /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DD932F57C09E00529C2B /* EmailField.swift */; };
+		0490DD9B2F57C1B900529C2B /* DefaultTextField Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DD9A2F57C1B500529C2B /* DefaultTextField Style.swift */; };
+		0490DD9D2F57C60100529C2B /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DD9C2F57C5F400529C2B /* PasswordField.swift */; };
+		0490DD9F2F57CD5F00529C2B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DD9E2F57CD5A00529C2B /* LoginViewModel.swift */; };
+		0490DDA22F5B679A00529C2B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDA12F5B679A00529C2B /* BaseViewModel.swift */; };
+		0490DDA42F5B682C00529C2B /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDA32F5B682C00529C2B /* HostingController.swift */; };
+		0490DDA62F5CE08300529C2B /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDA52F5CE08300529C2B /* AuthCoordinator.swift */; };
+		0490DDAC2F5CE96100529C2B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDAB2F5CE96100529C2B /* RegisterView.swift */; };
+		0490DDAE2F5CE99D00529C2B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDAD2F5CE99D00529C2B /* RegisterViewModel.swift */; };
+		0490DDB02F5CF4F400529C2B /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDAF2F5CF4F400529C2B /* TestView.swift */; };
+		0490DDB22F5E31E000529C2B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDB12F5E31E000529C2B /* MainCoordinator.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		0490DD2A2F56521500529C2B /* SwiftUI-Navigation-Coordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Navigation-Coordinator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0490DD512F5660E800529C2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0490DD532F5660E800529C2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0490DD552F5660E800529C2B /* SwiftUI_Navigation_Coordinator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUI_Navigation_Coordinator.entitlements; sourceTree = "<group>"; };
+		0490DD5F2F56645800529C2B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		0490DD622F56647D00529C2B /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		0490DD662F567A7000529C2B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0490DD932F57C09E00529C2B /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		0490DD9A2F57C1B500529C2B /* DefaultTextField Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultTextField Style.swift"; sourceTree = "<group>"; };
+		0490DD9C2F57C5F400529C2B /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
+		0490DD9E2F57CD5A00529C2B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		0490DDA12F5B679A00529C2B /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		0490DDA32F5B682C00529C2B /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		0490DDA52F5CE08300529C2B /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		0490DDAB2F5CE96100529C2B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		0490DDAD2F5CE99D00529C2B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		0490DDAF2F5CF4F400529C2B /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		0490DDB12F5E31E000529C2B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		0490DD2C2F56521500529C2B /* SwiftUI-Navigation-Coordinator */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "SwiftUI-Navigation-Coordinator";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0490DD272F56521400529C2B /* Frameworks */ = {
@@ -32,7 +60,7 @@
 		0490DD212F56521400529C2B = {
 			isa = PBXGroup;
 			children = (
-				0490DD2C2F56521500529C2B /* SwiftUI-Navigation-Coordinator */,
+				0490DD572F5660E800529C2B /* SwiftUI-Navigation-Coordinator */,
 				0490DD2B2F56521500529C2B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +71,110 @@
 				0490DD2A2F56521500529C2B /* SwiftUI-Navigation-Coordinator.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0490DD522F5660E800529C2B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0490DD512F5660E800529C2B /* AppDelegate.swift */,
+				0490DD532F5660E800529C2B /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0490DD572F5660E800529C2B /* SwiftUI-Navigation-Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0490DDA02F5B671300529C2B /* Core */,
+				0490DD642F567A4100529C2B /* Screens */,
+				0490DD922F57C08100529C2B /* Shared Views */,
+				0490DD5C2F56642200529C2B /* Coordinator (Navigation) */,
+				0490DD552F5660E800529C2B /* SwiftUI_Navigation_Coordinator.entitlements */,
+				0490DD522F5660E800529C2B /* App */,
+			);
+			path = "SwiftUI-Navigation-Coordinator";
+			sourceTree = "<group>";
+		};
+		0490DD5C2F56642200529C2B /* Coordinator (Navigation) */ = {
+			isa = PBXGroup;
+			children = (
+				0490DD5F2F56645800529C2B /* ApplicationCoordinator.swift */,
+				0490DDA72F5CE09C00529C2B /* Flows */,
+				0490DD612F56645C00529C2B /* Supporting */,
+			);
+			path = "Coordinator (Navigation)";
+			sourceTree = "<group>";
+		};
+		0490DD612F56645C00529C2B /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				0490DD622F56647D00529C2B /* BaseCoordinator.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		0490DD642F567A4100529C2B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0490DDA82F5CE93000529C2B /* Register */,
+				0490DD652F567A4B00529C2B /* Login */,
+				0490DDAF2F5CF4F400529C2B /* TestView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0490DD652F567A4B00529C2B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0490DD9E2F57CD5A00529C2B /* LoginViewModel.swift */,
+				0490DD662F567A7000529C2B /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0490DD922F57C08100529C2B /* Shared Views */ = {
+			isa = PBXGroup;
+			children = (
+				0490DD9C2F57C5F400529C2B /* PasswordField.swift */,
+				0490DD932F57C09E00529C2B /* EmailField.swift */,
+				0490DD952F57C0B000529C2B /* TextField Styles */,
+			);
+			path = "Shared Views";
+			sourceTree = "<group>";
+		};
+		0490DD952F57C0B000529C2B /* TextField Styles */ = {
+			isa = PBXGroup;
+			children = (
+				0490DD9A2F57C1B500529C2B /* DefaultTextField Style.swift */,
+			);
+			path = "TextField Styles";
+			sourceTree = "<group>";
+		};
+		0490DDA02F5B671300529C2B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0490DDA12F5B679A00529C2B /* BaseViewModel.swift */,
+				0490DDA32F5B682C00529C2B /* HostingController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0490DDA72F5CE09C00529C2B /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				0490DDA52F5CE08300529C2B /* AuthCoordinator.swift */,
+				0490DDB12F5E31E000529C2B /* MainCoordinator.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		0490DDA82F5CE93000529C2B /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				0490DDAB2F5CE96100529C2B /* RegisterView.swift */,
+				0490DDAD2F5CE99D00529C2B /* RegisterViewModel.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +191,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				0490DD2C2F56521500529C2B /* SwiftUI-Navigation-Coordinator */,
 			);
 			name = "SwiftUI-Navigation-Coordinator";
 			packageProductDependencies = (
@@ -109,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0490DD5B2F5660E800529C2B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +249,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0490DDB02F5CF4F400529C2B /* TestView.swift in Sources */,
+				0490DDA42F5B682C00529C2B /* HostingController.swift in Sources */,
+				0490DD672F567A7000529C2B /* LoginView.swift in Sources */,
+				0490DD632F56647D00529C2B /* BaseCoordinator.swift in Sources */,
+				0490DD9B2F57C1B900529C2B /* DefaultTextField Style.swift in Sources */,
+				0490DD582F5660E800529C2B /* AppDelegate.swift in Sources */,
+				0490DD9F2F57CD5F00529C2B /* LoginViewModel.swift in Sources */,
+				0490DDA62F5CE08300529C2B /* AuthCoordinator.swift in Sources */,
+				0490DDA22F5B679A00529C2B /* BaseViewModel.swift in Sources */,
+				0490DDAE2F5CE99D00529C2B /* RegisterViewModel.swift in Sources */,
+				0490DD9D2F57C60100529C2B /* PasswordField.swift in Sources */,
+				0490DDAC2F5CE96100529C2B /* RegisterView.swift in Sources */,
+				0490DD602F56645800529C2B /* ApplicationCoordinator.swift in Sources */,
+				0490DDB22F5E31E000529C2B /* MainCoordinator.swift in Sources */,
+				0490DD942F57C09E00529C2B /* EmailField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,12 +390,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SwiftUI-Navigation-Coordinator/SwiftUI_Navigation_Coordinator.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = NO;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = NO;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
@@ -266,6 +412,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "TestSwiftUI.SwiftUI-Navigation-Coordinator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -282,12 +429,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SwiftUI-Navigation-Coordinator/SwiftUI_Navigation_Coordinator.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = NO;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = NO;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
@@ -303,6 +451,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "TestSwiftUI.SwiftUI-Navigation-Coordinator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
