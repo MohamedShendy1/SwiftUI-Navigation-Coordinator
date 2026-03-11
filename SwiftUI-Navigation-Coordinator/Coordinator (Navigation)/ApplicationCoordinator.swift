@@ -38,15 +38,18 @@ extension ApplicationCoordinator {
     }
     
     func startMain(){
-        let view = TestView()
-        let controller = UIHostingController(rootView: view)
-        controller.title = "Test View"
-        presenter.setViewControllers([controller], animated: true)
+        let mainCoordinator = MainCoordinator(presenter: presenter)
+        mainCoordinator.delegate = self
+        mainCoordinator.start()
+        self.store(coordinator: mainCoordinator)
+        
     }
     
 }
 
 
+
+//MARK: - AuthCoordinatorDelegate
 extension ApplicationCoordinator: AuthCoordinatorDelegate {
     
     func onAuthCoordinationComplete(authCoordinator: AuthCoordinator) {
@@ -54,4 +57,13 @@ extension ApplicationCoordinator: AuthCoordinatorDelegate {
         self.free(coordinator: authCoordinator)
     }
         
+}
+
+
+//MARK: - MainCoordinatorDelegate
+extension ApplicationCoordinator: MainCoordinatorDelegate {
+    func onMainCoordinationComplete(coordinator : MainCoordinator) {
+        startAuth()
+        free(coordinator: coordinator)
+    }
 }

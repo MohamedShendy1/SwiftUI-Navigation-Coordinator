@@ -21,8 +21,17 @@
 		0490DDA62F5CE08300529C2B /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDA52F5CE08300529C2B /* AuthCoordinator.swift */; };
 		0490DDAC2F5CE96100529C2B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDAB2F5CE96100529C2B /* RegisterView.swift */; };
 		0490DDAE2F5CE99D00529C2B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDAD2F5CE99D00529C2B /* RegisterViewModel.swift */; };
-		0490DDB02F5CF4F400529C2B /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDAF2F5CF4F400529C2B /* TestView.swift */; };
 		0490DDB22F5E31E000529C2B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDB12F5E31E000529C2B /* MainCoordinator.swift */; };
+		0490DDB52F60D4B000529C2B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDB42F60D4B000529C2B /* HomeViewModel.swift */; };
+		0490DDB72F60D4BA00529C2B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDB62F60D4BA00529C2B /* HomeView.swift */; };
+		0490DDBC2F60DF1100529C2B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDBB2F60DF1100529C2B /* HomeCoordinator.swift */; };
+		0490DDBE2F60E65100529C2B /* LocationsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDBD2F60E65100529C2B /* LocationsCoordinator.swift */; };
+		0490DDC12F60E70100529C2B /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDC02F60E70100529C2B /* LocationsView.swift */; };
+		0490DDC32F60E70A00529C2B /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDC22F60E70A00529C2B /* LocationsViewModel.swift */; };
+		0490DDC52F60E75800529C2B /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDC42F60E75800529C2B /* MoreCoordinator.swift */; };
+		0490DDC82F60E7AB00529C2B /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDC72F60E7AB00529C2B /* MoreViewModel.swift */; };
+		0490DDCA2F60E7B600529C2B /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDC92F60E7B600529C2B /* MoreView.swift */; };
+		0490DDF72F60F77400529C2B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDF62F60F77400529C2B /* AccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +51,17 @@
 		0490DDA52F5CE08300529C2B /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		0490DDAB2F5CE96100529C2B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		0490DDAD2F5CE99D00529C2B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
-		0490DDAF2F5CF4F400529C2B /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		0490DDB12F5E31E000529C2B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		0490DDB42F60D4B000529C2B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0490DDB62F60D4BA00529C2B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0490DDBB2F60DF1100529C2B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		0490DDBD2F60E65100529C2B /* LocationsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsCoordinator.swift; sourceTree = "<group>"; };
+		0490DDC02F60E70100529C2B /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
+		0490DDC22F60E70A00529C2B /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		0490DDC42F60E75800529C2B /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
+		0490DDC72F60E7AB00529C2B /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
+		0490DDC92F60E7B600529C2B /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		0490DDF62F60F77400529C2B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +103,12 @@
 		0490DD572F5660E800529C2B /* SwiftUI-Navigation-Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				0490DD522F5660E800529C2B /* App */,
+				0490DD5C2F56642200529C2B /* Coordinator (Navigation) */,
 				0490DDA02F5B671300529C2B /* Core */,
 				0490DD642F567A4100529C2B /* Screens */,
 				0490DD922F57C08100529C2B /* Shared Views */,
-				0490DD5C2F56642200529C2B /* Coordinator (Navigation) */,
 				0490DD552F5660E800529C2B /* SwiftUI_Navigation_Coordinator.entitlements */,
-				0490DD522F5660E800529C2B /* App */,
 			);
 			path = "SwiftUI-Navigation-Coordinator";
 			sourceTree = "<group>";
@@ -98,6 +116,7 @@
 		0490DD5C2F56642200529C2B /* Coordinator (Navigation) */ = {
 			isa = PBXGroup;
 			children = (
+				0490DDBA2F60DEED00529C2B /* Tabs Flows */,
 				0490DD5F2F56645800529C2B /* ApplicationCoordinator.swift */,
 				0490DDA72F5CE09C00529C2B /* Flows */,
 				0490DD612F56645C00529C2B /* Supporting */,
@@ -116,9 +135,12 @@
 		0490DD642F567A4100529C2B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0490DDF42F60F75600529C2B /* AccountScreens */,
+				0490DDC62F60E79F00529C2B /* More */,
+				0490DDBF2F60E6F300529C2B /* Locations */,
+				0490DDB32F60D49C00529C2B /* Home */,
 				0490DDA82F5CE93000529C2B /* Register */,
 				0490DD652F567A4B00529C2B /* Login */,
-				0490DDAF2F5CF4F400529C2B /* TestView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -175,6 +197,59 @@
 				0490DDAD2F5CE99D00529C2B /* RegisterViewModel.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		0490DDB32F60D49C00529C2B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0490DDB42F60D4B000529C2B /* HomeViewModel.swift */,
+				0490DDB62F60D4BA00529C2B /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0490DDBA2F60DEED00529C2B /* Tabs Flows */ = {
+			isa = PBXGroup;
+			children = (
+				0490DDBB2F60DF1100529C2B /* HomeCoordinator.swift */,
+				0490DDBD2F60E65100529C2B /* LocationsCoordinator.swift */,
+				0490DDC42F60E75800529C2B /* MoreCoordinator.swift */,
+			);
+			path = "Tabs Flows";
+			sourceTree = "<group>";
+		};
+		0490DDBF2F60E6F300529C2B /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				0490DDC02F60E70100529C2B /* LocationsView.swift */,
+				0490DDC22F60E70A00529C2B /* LocationsViewModel.swift */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		0490DDC62F60E79F00529C2B /* More */ = {
+			isa = PBXGroup;
+			children = (
+				0490DDC72F60E7AB00529C2B /* MoreViewModel.swift */,
+				0490DDC92F60E7B600529C2B /* MoreView.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		0490DDF42F60F75600529C2B /* AccountScreens */ = {
+			isa = PBXGroup;
+			children = (
+				0490DDF52F60F76400529C2B /* Account */,
+			);
+			path = AccountScreens;
+			sourceTree = "<group>";
+		};
+		0490DDF52F60F76400529C2B /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				0490DDF62F60F77400529C2B /* AccountView.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,21 +324,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0490DDB02F5CF4F400529C2B /* TestView.swift in Sources */,
 				0490DDA42F5B682C00529C2B /* HostingController.swift in Sources */,
 				0490DD672F567A7000529C2B /* LoginView.swift in Sources */,
+				0490DDB52F60D4B000529C2B /* HomeViewModel.swift in Sources */,
+				0490DDBC2F60DF1100529C2B /* HomeCoordinator.swift in Sources */,
 				0490DD632F56647D00529C2B /* BaseCoordinator.swift in Sources */,
 				0490DD9B2F57C1B900529C2B /* DefaultTextField Style.swift in Sources */,
+				0490DDB72F60D4BA00529C2B /* HomeView.swift in Sources */,
 				0490DD582F5660E800529C2B /* AppDelegate.swift in Sources */,
+				0490DDCA2F60E7B600529C2B /* MoreView.swift in Sources */,
 				0490DD9F2F57CD5F00529C2B /* LoginViewModel.swift in Sources */,
 				0490DDA62F5CE08300529C2B /* AuthCoordinator.swift in Sources */,
 				0490DDA22F5B679A00529C2B /* BaseViewModel.swift in Sources */,
+				0490DDF72F60F77400529C2B /* AccountView.swift in Sources */,
+				0490DDC12F60E70100529C2B /* LocationsView.swift in Sources */,
 				0490DDAE2F5CE99D00529C2B /* RegisterViewModel.swift in Sources */,
+				0490DDC82F60E7AB00529C2B /* MoreViewModel.swift in Sources */,
+				0490DDC52F60E75800529C2B /* MoreCoordinator.swift in Sources */,
 				0490DD9D2F57C60100529C2B /* PasswordField.swift in Sources */,
 				0490DDAC2F5CE96100529C2B /* RegisterView.swift in Sources */,
 				0490DD602F56645800529C2B /* ApplicationCoordinator.swift in Sources */,
+				0490DDBE2F60E65100529C2B /* LocationsCoordinator.swift in Sources */,
 				0490DDB22F5E31E000529C2B /* MainCoordinator.swift in Sources */,
 				0490DD942F57C09E00529C2B /* EmailField.swift in Sources */,
+				0490DDC32F60E70A00529C2B /* LocationsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
