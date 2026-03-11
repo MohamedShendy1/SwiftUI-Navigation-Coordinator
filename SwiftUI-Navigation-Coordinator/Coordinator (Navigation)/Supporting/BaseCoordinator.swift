@@ -11,7 +11,7 @@ class BaseCoordinator<ContollerType> where ContollerType: UIViewController {
     
     let id = UUID()
     private (set) var childCoordinators = [UUID: Any]()
-    var presenter: ContollerType!
+    var presenter: ContollerType
     
     init(presenter: ContollerType) {
         self.presenter = presenter
