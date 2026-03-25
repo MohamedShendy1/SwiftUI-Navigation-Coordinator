@@ -12,6 +12,7 @@ private enum Constants {
 }
 
 struct AccountView: View {
+    var viewModel: ViewModel
     var body: some View {
         VStack{
             
@@ -33,12 +34,33 @@ struct AccountView: View {
                         width: Constants.avatarBackgroundSize,
                         height: Constants.avatarBackgroundSize
                     )
+                    
+                    Text("Mohamed")
+                        .padding(.top, 20)
+                    
+                    Spacer()
+                        .frame(height: 100)
+                    
+                    ListRow(title: "email", trailingText: "dev.moh@gmail.com")
                 }
+                .padding(.top, 20)
+                
             }
+            
+            Button("Edit Accout"){
+                viewModel.onEditTapped()
+            }
+            .padding(.bottom, 20)
+            
+            Button("Logout"){
+                viewModel.onlogoutTapped()
+            }
+            .padding(.bottom, 20)
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 #Preview {
-    AccountView()
+    AccountView(viewModel: .init())
 }
