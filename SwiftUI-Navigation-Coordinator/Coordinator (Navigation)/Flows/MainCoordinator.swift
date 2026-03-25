@@ -93,6 +93,7 @@ private extension MainCoordinator {
             tag: NavigationBarTag.more.rawValue
         )
         let coordinator = MoreCoordinator(presenter: flowPresenter)
+        coordinator.delegate = self
         coordinator.start()
         store(coordinator: coordinator)
         return coordinator
@@ -102,8 +103,12 @@ private extension MainCoordinator {
     
 }
 
-
-extension MainCoordinator{
+//MARK: - More Delegate
+extension MainCoordinator: MoreDelegate{
+    func onMoreLogoutTapped(coordinator: MoreCoordinator) {
+        delegate?.onMainCoordinationComplete(coordinator: self)
+        self.free(coordinator: coordinator)
+    }
     
 }
 

@@ -32,6 +32,10 @@
 		0490DDC82F60E7AB00529C2B /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDC72F60E7AB00529C2B /* MoreViewModel.swift */; };
 		0490DDCA2F60E7B600529C2B /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDC92F60E7B600529C2B /* MoreView.swift */; };
 		0490DDF72F60F77400529C2B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDF62F60F77400529C2B /* AccountView.swift */; };
+		0490DDF92F72501000529C2B /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDF82F72501000529C2B /* ListRow.swift */; };
+		0490DDFB2F7258CD00529C2B /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDFA2F7258CD00529C2B /* AccountViewModel.swift */; };
+		0490DDFD2F7260AB00529C2B /* AccountHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDFC2F7260AB00529C2B /* AccountHostingController.swift */; };
+		0490DE002F7262CA00529C2B /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DDFF2F7262CA00529C2B /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		0490DDC72F60E7AB00529C2B /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
 		0490DDC92F60E7B600529C2B /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		0490DDF62F60F77400529C2B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		0490DDF82F72501000529C2B /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
+		0490DDFA2F7258CD00529C2B /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		0490DDFC2F7260AB00529C2B /* AccountHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHostingController.swift; sourceTree = "<group>"; };
+		0490DDFF2F7262CA00529C2B /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 		0490DD572F5660E800529C2B /* SwiftUI-Navigation-Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				0490DDFE2F7262AE00529C2B /* Extensions */,
 				0490DD522F5660E800529C2B /* App */,
 				0490DD5C2F56642200529C2B /* Coordinator (Navigation) */,
 				0490DDA02F5B671300529C2B /* Core */,
@@ -160,6 +169,7 @@
 				0490DD9C2F57C5F400529C2B /* PasswordField.swift */,
 				0490DD932F57C09E00529C2B /* EmailField.swift */,
 				0490DD952F57C0B000529C2B /* TextField Styles */,
+				0490DDF82F72501000529C2B /* ListRow.swift */,
 			);
 			path = "Shared Views";
 			sourceTree = "<group>";
@@ -248,8 +258,18 @@
 			isa = PBXGroup;
 			children = (
 				0490DDF62F60F77400529C2B /* AccountView.swift */,
+				0490DDFA2F7258CD00529C2B /* AccountViewModel.swift */,
+				0490DDFC2F7260AB00529C2B /* AccountHostingController.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		0490DDFE2F7262AE00529C2B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0490DDFF2F7262CA00529C2B /* UIViewControllerExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,9 +355,11 @@
 				0490DDCA2F60E7B600529C2B /* MoreView.swift in Sources */,
 				0490DD9F2F57CD5F00529C2B /* LoginViewModel.swift in Sources */,
 				0490DDA62F5CE08300529C2B /* AuthCoordinator.swift in Sources */,
+				0490DDFD2F7260AB00529C2B /* AccountHostingController.swift in Sources */,
 				0490DDA22F5B679A00529C2B /* BaseViewModel.swift in Sources */,
 				0490DDF72F60F77400529C2B /* AccountView.swift in Sources */,
 				0490DDC12F60E70100529C2B /* LocationsView.swift in Sources */,
+				0490DDF92F72501000529C2B /* ListRow.swift in Sources */,
 				0490DDAE2F5CE99D00529C2B /* RegisterViewModel.swift in Sources */,
 				0490DDC82F60E7AB00529C2B /* MoreViewModel.swift in Sources */,
 				0490DDC52F60E75800529C2B /* MoreCoordinator.swift in Sources */,
@@ -347,7 +369,9 @@
 				0490DDBE2F60E65100529C2B /* LocationsCoordinator.swift in Sources */,
 				0490DDB22F5E31E000529C2B /* MainCoordinator.swift in Sources */,
 				0490DD942F57C09E00529C2B /* EmailField.swift in Sources */,
+				0490DDFB2F7258CD00529C2B /* AccountViewModel.swift in Sources */,
 				0490DDC32F60E70A00529C2B /* LocationsViewModel.swift in Sources */,
+				0490DE002F7262CA00529C2B /* UIViewControllerExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
