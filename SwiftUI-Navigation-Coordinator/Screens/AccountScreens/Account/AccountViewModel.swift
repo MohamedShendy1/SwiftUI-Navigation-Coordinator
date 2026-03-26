@@ -12,7 +12,7 @@ import UIKit
 protocol AccountNavDelegate: AnyObject {
     func onAccountBackTapped()
     func onAccountExitTapped()
-    func onAccounrEditTapped()
+    func onAccountEditTapped()
     func onAccountLogoutTapped()
     
     /**
@@ -35,6 +35,7 @@ extension AccountView {
 }
 
 
+//MARK: - Actions
 extension AccountView.ViewModel{
      
     func onBackTapped() {
@@ -46,7 +47,7 @@ extension AccountView.ViewModel{
     }
     
     func onEditTapped() {
-        navDelegate?.onAccounrEditTapped()
+        navDelegate?.onAccountEditTapped()
     }
     
     func onlogoutTapped() {

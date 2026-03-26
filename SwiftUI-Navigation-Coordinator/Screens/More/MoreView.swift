@@ -9,7 +9,8 @@ import SwiftUI
 
 struct MoreView: View {
     
-    var viewModel: ViewModel
+    @StateObject var viewModel: ViewModel
+    
     var body: some View {
         ScrollView{
             VStack(spacing: 10) {

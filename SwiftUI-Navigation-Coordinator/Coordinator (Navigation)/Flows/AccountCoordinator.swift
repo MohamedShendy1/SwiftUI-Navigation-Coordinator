@@ -35,7 +35,8 @@ extension AccountCoordinator {
         let view = AccountView(viewModel: viewModel)
         let controller = AccountHostingController(rootView: view, viewModel: viewModel)
         controller.hidesBottomBarWhenPushed = true
-        presenter.pushViewController(controller, animated: true)
+
+        pushInitialControllerBasedOnEmbeddedNavState(controller: controller)
         
     }
     

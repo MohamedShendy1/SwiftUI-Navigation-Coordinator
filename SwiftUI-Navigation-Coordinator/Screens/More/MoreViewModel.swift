@@ -19,10 +19,10 @@ extension MoreView {
     class ViewModel: BaseViewModel, ObservableObject {
         
         weak var navDelegate: MoreViewNavDelegate?
-        
-        
+
     }
 }
+
 
 //MARK: - Actions
 extension MoreView.ViewModel  {

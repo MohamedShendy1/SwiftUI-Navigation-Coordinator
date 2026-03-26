@@ -11,6 +11,7 @@ import SwiftUI
 class LocationsCoordinator: BaseCoordinator<UINavigationController> {
     
     override func start() {
+        super.init()
         showingLocationsScreen()
     }
 }
