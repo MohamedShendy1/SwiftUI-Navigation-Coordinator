@@ -141,18 +141,18 @@
 			children = (
 				0490DD5F2F56645800529C2B /* ApplicationCoordinator.swift */,
 				0490DDA72F5CE09C00529C2B /* Flows */,
-				0490DD612F56645C00529C2B /* Supporting */,
+				0490DD612F56645C00529C2B /* Structure */,
 				0490DDBA2F60DEED00529C2B /* Tabs Flows */,
 			);
 			path = "Coordinator (Navigation)";
 			sourceTree = "<group>";
 		};
-		0490DD612F56645C00529C2B /* Supporting */ = {
+		0490DD612F56645C00529C2B /* Structure */ = {
 			isa = PBXGroup;
 			children = (
 				0490DD622F56647D00529C2B /* BaseCoordinator.swift */,
 			);
-			path = Supporting;
+			path = Structure;
 			sourceTree = "<group>";
 		};
 		0490DD642F567A4100529C2B /* Screens */ = {
