@@ -16,8 +16,6 @@ class AuthCoordinator: BaseCoordinator<UINavigationController>, LoginNavDelegate
     weak var delegate: AuthCoordinatorDelegate?
     
     override func start() {
-        super.init()
-
         showLoginScreen()
     }
 }

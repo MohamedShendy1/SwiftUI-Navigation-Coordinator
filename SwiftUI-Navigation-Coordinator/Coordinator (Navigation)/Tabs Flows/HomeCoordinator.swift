@@ -11,7 +11,6 @@ import SwiftUI
 class HomeCoordinator: BaseCoordinator<UINavigationController> {
     
     override func start() {
-        super.init()
         showingHomeScreen()
     }
 }

@@ -14,7 +14,7 @@ struct MoreView: View {
     var body: some View {
         ScrollView{
             VStack(spacing: 10) {
-                ListRow(title: "Accoumt", systemImageName: "person.crop.circle", showingTrailingChevron: true) {
+                ListRow(title: "Account", systemImageName: "person.crop.circle", showingTrailingChevron: true) {
                     viewModel.onAccountTapped()
                 }
             }.navigationBarBackButtonHidden(true)

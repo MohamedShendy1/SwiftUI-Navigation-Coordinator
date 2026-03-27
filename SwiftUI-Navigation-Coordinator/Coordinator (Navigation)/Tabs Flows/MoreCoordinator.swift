@@ -15,7 +15,6 @@ class MoreCoordinator: BaseCoordinator<UINavigationController> {
     weak var delegate: MoreDelegate?
     
     override func start() {
-        super.init()
         ShowingMoreScreen()
     }
 }
@@ -39,21 +38,39 @@ private extension MoreCoordinator {
     
 }
 
-// MARK: - MoreView Nave Delegate
+//MARK: - Starting Account Flow
+extension MoreCoordinator {
+    
+    func startAccountFlow() {
+        let coordinator = AccountCoordinator(presenter: presenter)
+        coordinator.delegate = self
+        coordinator.start()
+        
+        store(coordinator: coordinator)
+        
+    }
+}
+// MARK: - MoreView NaveDelegate
 extension MoreCoordinator: MoreViewNavDelegate {
+    
     func onMoreViewAccountTapped() {
-//        showAccountScreen()
+        startAccountFlow()
     }
     
-    func onMoreViewLocationsapped() {
-        
-    }
-    
-    func onMoreViewUpgradeTapped() {
-        
-    }
+    func onMoreViewLocationsapped() {}
+    func onMoreViewUpgradeTapped() { }
     
     
 }
 
 
+
+// MARK: - Account Coordinator Delegate
+
+extension MoreCoordinator: AccountCoordinatorDelegate {
+    
+    func onAccountCoordinationComplete(coordinator: AccountCoordinator) {
+        free(coordinator: coordinator)
+    }
+    
+}

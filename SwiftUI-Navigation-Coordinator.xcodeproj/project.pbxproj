@@ -43,6 +43,8 @@
 		0490DE0C2F73B07400529C2B /* ConfirmEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DE0B2F73B07400529C2B /* ConfirmEmailView.swift */; };
 		0490DE0E2F73B5A400529C2B /* ConfirmEmailHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DE0D2F73B5A400529C2B /* ConfirmEmailHostingController.swift */; };
 		0490DE102F74DD9000529C2B /* AccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DE0F2F74DD9000529C2B /* AccountCoordinator.swift */; };
+		0490DE132F74EA8500529C2B /* ConfirmEmailCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DE122F74EA8500529C2B /* ConfirmEmailCoordinating.swift */; };
+		0490DE162F75FF6C00529C2B /* NotificationsNameExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DE152F75FF6C00529C2B /* NotificationsNameExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,8 @@
 		0490DE0B2F73B07400529C2B /* ConfirmEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmEmailView.swift; sourceTree = "<group>"; };
 		0490DE0D2F73B5A400529C2B /* ConfirmEmailHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmEmailHostingController.swift; sourceTree = "<group>"; };
 		0490DE0F2F74DD9000529C2B /* AccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinator.swift; sourceTree = "<group>"; };
+		0490DE122F74EA8500529C2B /* ConfirmEmailCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmEmailCoordinating.swift; sourceTree = "<group>"; };
+		0490DE152F75FF6C00529C2B /* NotificationsNameExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsNameExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		0490DD5C2F56642200529C2B /* Coordinator (Navigation) */ = {
 			isa = PBXGroup;
 			children = (
+				0490DE112F74EA6400529C2B /* Supporting */,
 				0490DD5F2F56645800529C2B /* ApplicationCoordinator.swift */,
 				0490DDA72F5CE09C00529C2B /* Flows */,
 				0490DD612F56645C00529C2B /* Structure */,
@@ -285,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				0490DDFF2F7262CA00529C2B /* UIViewControllerExtensions.swift */,
+				0490DE152F75FF6C00529C2B /* NotificationsNameExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -307,6 +313,14 @@
 				0490DE0D2F73B5A400529C2B /* ConfirmEmailHostingController.swift */,
 			);
 			path = "Confirm Email";
+			sourceTree = "<group>";
+		};
+		0490DE112F74EA6400529C2B /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				0490DE122F74EA8500529C2B /* ConfirmEmailCoordinating.swift */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,10 +423,12 @@
 				0490DD602F56645800529C2B /* ApplicationCoordinator.swift in Sources */,
 				0490DE0A2F73B06C00529C2B /* ConfirmEmailViewModel.swift in Sources */,
 				0490DDBE2F60E65100529C2B /* LocationsCoordinator.swift in Sources */,
+				0490DE132F74EA8500529C2B /* ConfirmEmailCoordinating.swift in Sources */,
 				0490DDB22F5E31E000529C2B /* MainCoordinator.swift in Sources */,
 				0490DE102F74DD9000529C2B /* AccountCoordinator.swift in Sources */,
 				0490DE072F73ADD400529C2B /* EditAccountHostingController.swift in Sources */,
 				0490DD942F57C09E00529C2B /* EmailField.swift in Sources */,
+				0490DE162F75FF6C00529C2B /* NotificationsNameExtensions.swift in Sources */,
 				0490DDFB2F7258CD00529C2B /* AccountViewModel.swift in Sources */,
 				0490DDC32F60E70A00529C2B /* LocationsViewModel.swift in Sources */,
 				0490DE002F7262CA00529C2B /* UIViewControllerExtensions.swift in Sources */,

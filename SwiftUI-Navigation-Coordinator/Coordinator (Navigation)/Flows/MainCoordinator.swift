@@ -20,7 +20,6 @@ class MainCoordinator: BaseCoordinator<UINavigationController> {
     
     weak var delegate: MainCoordinatorDelegate?
     override func start() {
-        super.init()
         presenter.setNavigationBarHidden(true, animated: false)
         showingTabBarView()
     }

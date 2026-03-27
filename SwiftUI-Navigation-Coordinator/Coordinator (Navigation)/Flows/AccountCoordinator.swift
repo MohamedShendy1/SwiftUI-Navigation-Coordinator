@@ -13,12 +13,11 @@ protocol AccountCoordinatorDelegate: AnyObject {
     func onAccountCoordinationComplete(coordinator: AccountCoordinator)
 }
 
-class AccountCoordinator: BaseCoordinator<UINavigationController> {
+class AccountCoordinator: BaseCoordinator<UINavigationController>, ConfirmEmailCoordinating {
     
     weak var delegate: AccountCoordinatorDelegate?
     
     override func start() {
-        super.start()
         showAccountScreen()
     }
 }
@@ -50,9 +49,7 @@ extension AccountCoordinator {
     }
 }
 
-
-
-//MARK: - AccountNavDelegate
+//MARK: - AccountNavDelegate -> Navigatons Actions to (back - dismiss - Navigate to EditeAccount screen - logout )
 extension AccountCoordinator: AccountNavDelegate {
     func onAccountBackTapped(){
         presenter.popViewController(animated: true)
@@ -72,7 +69,15 @@ extension AccountCoordinator: AccountNavDelegate {
     
     func onAccountLogoutTapped() {
         
-        // TODO: Send Notifications To Log out
+       // in the first condition we assume that the view doesnot emmbed in navigation stack and it present as modally  so we need to exit that modal presentation and then send request to logout (notification) but in the second case the view already embede in navigation stack and we need only to send notification to logout
+        
+        if !embeddedInExistingNavStack {
+            presenter.dismiss(animated: true) {
+                NotificationCenter.default.post(name: .logout, object: nil)
+            }
+        }else{
+            NotificationCenter.default.post(name: .logout, object: nil)
+        }
     }
     
     
@@ -82,12 +87,37 @@ extension AccountCoordinator: AccountNavDelegate {
 //MARK: - AccountNavDelegate
 extension AccountCoordinator: EditAccountNavDelegate {
    
+    func onEditAccountBackTapped() {
+        presenter.popViewController(animated: true)
+    }
+
     func onEditAccountSubmitTapped(editEmail: Bool) {
         
+        if editEmail {
+            showConfirmEmailScreen()
+        }else {
+            presenter.popViewController(animated: true)
+        }
     }
     
-    func onEditAccountBackTapped() {
-        
+}
+
+
+//MARK: - ConfirmEmailNavDelegate
+extension AccountCoordinator {
+    
+    func onConfirmEmailSubmit() {
+       
+        if let accountController = presenter.viewControllers.first(where:{$0 is AccountHostingController}) {
+            presenter.popToViewController(accountController, animated: true)
+        }else {
+            
+            presenter.popViewController(animated: true)
+        }
+    }
+    
+    func onConfirmEmailBackTapped() {
+        presenter.popViewController(animated: true)
     }
     
 }
