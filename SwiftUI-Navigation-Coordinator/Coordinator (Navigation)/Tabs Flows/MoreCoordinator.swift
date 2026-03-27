@@ -34,53 +34,43 @@ private extension MoreCoordinator {
         presenter.setViewControllers([controller], animated: true)
     }
     
-func showAccountScreen() {
-        let viewModel = AccountView.ViewModel()
-        viewModel.navDelegate = self
-        viewModel.showExitButton = false
-    let view = AccountView(viewModel: viewModel)
-    let controller = AccountHostingController(rootView: view, viewModel: viewModel)
-    controller.hidesBottomBarWhenPushed = true
-    presenter.pushViewController(controller, animated: true)
-    
-    }
+
     
 }
 
-// MARK: - MoreView Nave Delegate
+//MARK: - Starting Account Flow
+extension MoreCoordinator {
+    
+    func startAccountFlow() {
+        let coordinator = AccountCoordinator(presenter: presenter)
+        coordinator.delegate = self
+        coordinator.start()
+        
+        store(coordinator: coordinator)
+        
+    }
+}
+// MARK: - MoreView NaveDelegate
 extension MoreCoordinator: MoreViewNavDelegate {
+    
     func onMoreViewAccountTapped() {
-        showAccountScreen()
+        startAccountFlow()
     }
     
-    func onMoreViewLocationsapped() {
-        
-    }
-    
-    func onMoreViewUpgradeTapped() {
-        
-    }
+    func onMoreViewLocationsapped() {}
+    func onMoreViewUpgradeTapped() { }
     
     
 }
 
 
-extension MoreCoordinator: AccountNavDelegate {
-    func onAccountBackTapped(){
-        presenter.popViewController(animated: true)
-    }
-    
-    func onAccountExitTapped(){
-        
-    }
-    
-    func onAccounrEditTapped(){
-        
-    }
-    
-    func onAccountLogoutTapped(){
-        delegate?.onMoreLogoutTapped(coordinator: self)
-    }
-    
 
+// MARK: - Account Coordinator Delegate
+
+extension MoreCoordinator: AccountCoordinatorDelegate {
+    
+    func onAccountCoordinationComplete(coordinator: AccountCoordinator) {
+        free(coordinator: coordinator)
+    }
+    
 }

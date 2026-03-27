@@ -15,7 +15,7 @@ class AuthCoordinator: BaseCoordinator<UINavigationController>, LoginNavDelegate
     
     weak var delegate: AuthCoordinatorDelegate?
     
-    override func start(){
+    override func start() {
         showLoginScreen()
     }
 }
@@ -25,7 +25,7 @@ class AuthCoordinator: BaseCoordinator<UINavigationController>, LoginNavDelegate
 
 extension AuthCoordinator {
     
-    func showLoginScreen(){
+    func showLoginScreen() {
         let viewModel = LoginView.ViewModel()
         viewModel.navDelegate = self
 

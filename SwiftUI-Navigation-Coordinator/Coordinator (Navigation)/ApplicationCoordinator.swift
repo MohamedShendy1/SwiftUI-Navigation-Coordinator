@@ -7,24 +7,48 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
     
+    let logoutNotification = NotificationCenter.default.publisher(for: .logout)
+    private var cancellables = Set<AnyCancellable>()
     let window: UIWindow
+   
     init(window: UIWindow) {
         self.window = window
         let presenter = UINavigationController()
         
         presenter.isNavigationBarHidden = false
+        
         super.init(presenter: presenter)
+        
         self.window.rootViewController = presenter
         self.window.makeKeyAndVisible()
+        
+        self.configure()
     }
     
     override func start() {
         startAuth()
     }
     
+    private func logout() {
+        startAuth()
+    }
+    
+}
+
+//MARK: - Configurations
+extension ApplicationCoordinator {
+    func configure() {
+        logoutNotification
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self  else {return}
+                logout()
+            }.store(in: &cancellables)
+    }
 }
 
 //MARK: - Showing Screens

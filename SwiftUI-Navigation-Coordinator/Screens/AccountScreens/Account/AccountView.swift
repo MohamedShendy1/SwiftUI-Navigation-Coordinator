@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+
 private enum Constants {
     static let avatarBackgroundSize: CGFloat = 70
     static var avatarSize: CGFloat { avatarBackgroundSize * 0.5}
 }
 
 struct AccountView: View {
-    var viewModel: ViewModel
+    
+    @StateObject  var viewModel: ViewModel
+    
     var body: some View {
         VStack{
             

@@ -9,11 +9,12 @@ import SwiftUI
 
 struct MoreView: View {
     
-    var viewModel: ViewModel
+    @StateObject var viewModel: ViewModel
+    
     var body: some View {
         ScrollView{
             VStack(spacing: 10) {
-                ListRow(title: "Accoumt", systemImageName: "person.crop.circle", showingTrailingChevron: true) {
+                ListRow(title: "Account", systemImageName: "person.crop.circle", showingTrailingChevron: true) {
                     viewModel.onAccountTapped()
                 }
             }.navigationBarBackButtonHidden(true)
