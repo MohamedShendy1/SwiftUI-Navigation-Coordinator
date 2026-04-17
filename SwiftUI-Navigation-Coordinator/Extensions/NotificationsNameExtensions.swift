@@ -2,7 +2,7 @@
 //  NotificationsNameExtensions.swift
 //  SwiftUI-Navigation-Coordinator
 //
-//  Created by mac on 27/03/2026.
+// Created by Mohamed Shendy  27/03/2026.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  LocationsCoordinator.swift
 //  SwiftUI-Navigation-Coordinator
 //
-//  Created by mac on 11/03/2026.
+// Created by Mohamed Shendy  11/03/2026.
 //
 
 import UIKit
@@ -44,7 +44,7 @@ private extension LocationsCoordinator {
     
     func startAccountFlow(delegate: AccountCoordinatorDelegate) {
         let accountPresenter = UINavigationController()
-        let coordinator = AccountCoordinator(presenter: accountPresenter)
+        let coordinator = AccountCoordinator(presenter: accountPresenter,modelLayer: modelLayer)
         coordinator.delegate = delegate
         coordinator.start()
         

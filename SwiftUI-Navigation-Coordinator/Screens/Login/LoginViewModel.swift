@@ -2,7 +2,7 @@
 //  LoginViewModel.swift
 //  SwiftUI-Navigation-Coordinator
 //
-//  Created by mac on 04/03/2026.
+// Created by Mohamed Shendy  04/03/2026.
 //
 
 import SwiftUI
@@ -21,12 +21,19 @@ extension LoginView {
         
         weak var navDelegate: LoginNavDelegate?
         
+        let userDefaults: UserDefaultsManager
+        
+        init(userDefaults: UserDefaultsManager){
+            self.userDefaults = userDefaults
+        }
+        
     }
 }
 
 
 extension LoginView.ViewModel {
     func onLoginTapped() {
+        userDefaults.isLoggedIn = true
         navDelegate?.onLoginSuccessfullyTapped()
     }
     

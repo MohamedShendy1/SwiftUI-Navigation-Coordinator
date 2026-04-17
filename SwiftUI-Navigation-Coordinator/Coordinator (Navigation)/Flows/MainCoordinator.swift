@@ -2,7 +2,7 @@
 //  MainCoordinator.swift
 //  SwiftUI-Navigation-Coordinator
 //
-//  Created by mac on 09/03/2026.
+// Created by Mohamed Shendy  09/03/2026.
 //
 
 import UIKit
@@ -64,7 +64,7 @@ private extension MainCoordinator {
             tag: NavigationBarTag.home.rawValue
         )
         
-        let coordinator = HomeCoordinator(presenter: flowPresenter)
+        let coordinator = HomeCoordinator(presenter: flowPresenter,modelLayer: modelLayer)
         coordinator.start()
         store(coordinator: coordinator)
         return coordinator
@@ -79,7 +79,7 @@ private extension MainCoordinator {
             image: UIImage(systemName: "mappin.and.ellipse"),
             tag: NavigationBarTag.locations.rawValue
         )
-        let coordinator = LocationsCoordinator(presenter: flowPresenter)
+        let coordinator = LocationsCoordinator(presenter: flowPresenter,modelLayer: modelLayer)
         coordinator.start()
         store(coordinator: coordinator)
         return coordinator
@@ -92,7 +92,7 @@ private extension MainCoordinator {
             image: UIImage(systemName: "line.3.horizontal"),
             tag: NavigationBarTag.more.rawValue
         )
-        let coordinator = MoreCoordinator(presenter: flowPresenter)
+        let coordinator = MoreCoordinator(presenter: flowPresenter,modelLayer: modelLayer)
         coordinator.delegate = self
         coordinator.start()
         store(coordinator: coordinator)

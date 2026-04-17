@@ -2,7 +2,7 @@
 //  Appdelegate.swift
 //  SwiftUI-Navigation-Coordinator
 //
-//  Created by mac on 03/03/2026.
+// Created by Mohamed Shendy  03/03/2026.
 //
 
 import UIKit

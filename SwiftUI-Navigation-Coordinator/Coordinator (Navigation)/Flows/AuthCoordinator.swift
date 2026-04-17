@@ -2,7 +2,7 @@
 //  AuthCoordinator.swift
 //  SwiftUI-Navigation-Coordinator
 //
-//  Created by mac on 08/03/2026.
+// Created by Mohamed Shendy  08/03/2026.
 //
 
 import UIKit
@@ -27,7 +27,7 @@ extension AuthCoordinator {
     
     func showLoginScreen() {
         
-        let viewModel = LoginView.ViewModel()
+        let viewModel = LoginView.ViewModel(userDefaults: userDefaults)
         viewModel.navDelegate = self
 
         let view = LoginView(viewModel: viewModel)

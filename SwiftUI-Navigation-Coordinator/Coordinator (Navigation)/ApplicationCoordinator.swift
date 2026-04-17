@@ -2,7 +2,7 @@
 //  ApplicationCoordinator.swift
 //  SwiftUI-Navigation-Coordinator
 //
-//  Created by mac on 03/03/2026.
+// Created by Mohamed Shendy  03/03/2026.
 //
 
 import UIKit
@@ -18,10 +18,12 @@ class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
     init(window: UIWindow) {
         self.window = window
         let presenter = UINavigationController()
-        
         presenter.isNavigationBarHidden = false
         
-        super.init(presenter: presenter)
+        let systemLayer = SystemLayer(userDefaults: .init())
+        let modelLayer = ModelLayer(systemLayer: systemLayer)
+        
+        super.init(presenter: presenter, modelLayer: modelLayer)
         
         self.window.rootViewController = presenter
         self.window.makeKeyAndVisible()
@@ -31,10 +33,17 @@ class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
     
     override func start() {
         startAuth()
+        
+        if userDefaults.isLoggedIn {
+            startMain()
+        }else{
+            startAuth()
+        }
     }
     
     private func logout() {
-        startAuth()
+        modelLayer.logout()
+        start()
     }
     
 }
@@ -55,14 +64,14 @@ extension ApplicationCoordinator {
 extension ApplicationCoordinator {
     
     func startAuth(){
-        let authCoordinator = AuthCoordinator(presenter: presenter)
+        let authCoordinator = AuthCoordinator(presenter: presenter,modelLayer: modelLayer)
         authCoordinator.delegate = self
         authCoordinator.start()
         self.store(coordinator: authCoordinator)
     }
     
     func startMain(){
-        let mainCoordinator = MainCoordinator(presenter: presenter)
+        let mainCoordinator = MainCoordinator(presenter: presenter,modelLayer: modelLayer)
         mainCoordinator.delegate = self
         mainCoordinator.start()
         self.store(coordinator: mainCoordinator)
@@ -77,7 +86,7 @@ extension ApplicationCoordinator {
 extension ApplicationCoordinator: AuthCoordinatorDelegate {
     
     func onAuthCoordinationComplete(authCoordinator: AuthCoordinator) {
-        startMain()
+        start()
         self.free(coordinator: authCoordinator)
     }
         
@@ -87,7 +96,7 @@ extension ApplicationCoordinator: AuthCoordinatorDelegate {
 //MARK: - MainCoordinatorDelegate
 extension ApplicationCoordinator: MainCoordinatorDelegate {
     func onMainCoordinationComplete(coordinator : MainCoordinator) {
-        startAuth()
+        start()
         free(coordinator: coordinator)
     }
 }

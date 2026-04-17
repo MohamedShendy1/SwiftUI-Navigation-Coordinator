@@ -2,7 +2,7 @@
 //  MoreCoordinator.swift
 //  SwiftUI-Navigation-Coordinator
 //
-//  Created by mac on 11/03/2026.
+// Created by Mohamed Shendy  11/03/2026.
 //
 
 import UIKit
@@ -42,7 +42,7 @@ private extension MoreCoordinator {
 private extension MoreCoordinator {
     
     func startAccountFlow() {
-        let coordinator = AccountCoordinator(presenter: presenter)
+        let coordinator = AccountCoordinator(presenter: presenter,modelLayer: modelLayer)
         coordinator.delegate = self
         coordinator.start()
         
@@ -50,7 +50,7 @@ private extension MoreCoordinator {
     }
     
     func startLocationFlow() {
-        let coordinator = LocationsCoordinator(presenter: presenter)
+        let coordinator = LocationsCoordinator(presenter: presenter,modelLayer: modelLayer)
         coordinator.delegate = self
         coordinator.start()
         
