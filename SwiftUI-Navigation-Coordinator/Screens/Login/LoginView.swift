@@ -29,5 +29,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(viewModel: .init())
+    LoginView(viewModel: .init(userDefaults: .init()))
 }

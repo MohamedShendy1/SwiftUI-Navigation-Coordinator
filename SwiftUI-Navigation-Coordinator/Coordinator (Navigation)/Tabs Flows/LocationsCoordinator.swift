@@ -44,7 +44,7 @@ private extension LocationsCoordinator {
     
     func startAccountFlow(delegate: AccountCoordinatorDelegate) {
         let accountPresenter = UINavigationController()
-        let coordinator = AccountCoordinator(presenter: accountPresenter)
+        let coordinator = AccountCoordinator(presenter: accountPresenter,modelLayer: modelLayer)
         coordinator.delegate = delegate
         coordinator.start()
         

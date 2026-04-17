@@ -17,9 +17,11 @@ class BaseCoordinator<ContollerType> where ContollerType: UIViewController {
     private(set) var childCoordinators = [UUID: Any]()
     
     var presenter: ContollerType
+    let modelLayer: ModelLayer
     
-    init(presenter: ContollerType) {
+    init(presenter: ContollerType, modelLayer: ModelLayer) {
         self.presenter = presenter
+        self.modelLayer = modelLayer
         if let navController = presenter as? UINavigationController{
             embeddedInExistingNavStack = navController.viewControllers.count > 0
         }
@@ -29,9 +31,15 @@ class BaseCoordinator<ContollerType> where ContollerType: UIViewController {
     func start() {
         preconditionFailure("Start method not immplemented")
     }
-    
 }
 
+//MARK: - Convenience
+extension BaseCoordinator {
+    var userDefaults: UserDefaultsManager{modelLayer.systemLayer.userDefaults}
+}
+
+
+//MARK: -  Chield Coordenator Managment
 extension BaseCoordinator{
     
     func store<U: UIViewController>(coordinator: BaseCoordinator<U>) {
