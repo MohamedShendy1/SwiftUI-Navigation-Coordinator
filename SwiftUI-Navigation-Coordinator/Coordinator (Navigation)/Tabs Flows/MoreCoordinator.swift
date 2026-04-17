@@ -11,7 +11,7 @@ import SwiftUI
 protocol MoreDelegate: AnyObject {
     func onMoreLogoutTapped(coordinator: MoreCoordinator)
 }
-class MoreCoordinator: BaseCoordinator<UINavigationController> {
+class MoreCoordinator: BaseCoordinator<UINavigationController>, UpgradeCoordinating{
     weak var delegate: MoreDelegate?
     
     override func start() {
@@ -39,7 +39,7 @@ private extension MoreCoordinator {
 }
 
 //MARK: - Starting Account Flow
-extension MoreCoordinator {
+private extension MoreCoordinator {
     
     func startAccountFlow() {
         let coordinator = AccountCoordinator(presenter: presenter)
@@ -47,8 +47,17 @@ extension MoreCoordinator {
         coordinator.start()
         
         store(coordinator: coordinator)
-        
     }
+    
+    func startLocationFlow() {
+        let coordinator = LocationsCoordinator(presenter: presenter)
+        coordinator.delegate = self
+        coordinator.start()
+        
+        store(coordinator: coordinator)
+    }
+    
+    
 }
 // MARK: - MoreView NaveDelegate
 extension MoreCoordinator: MoreViewNavDelegate {
@@ -57,20 +66,33 @@ extension MoreCoordinator: MoreViewNavDelegate {
         startAccountFlow()
     }
     
-    func onMoreViewLocationsapped() {}
-    func onMoreViewUpgradeTapped() { }
+    func onMoreViewLocationsapped() {
+        startLocationFlow()
+    }
+    
+    func onMoreViewUpgradeTapped() {
+        showingUpgradeScreen()
+    }
     
     
 }
 
 
 
-// MARK: - Account Coordinator Delegate
-
+// MARK: - AccountCoordinatorDelegate
 extension MoreCoordinator: AccountCoordinatorDelegate {
     
     func onAccountCoordinationComplete(coordinator: AccountCoordinator) {
         free(coordinator: coordinator)
     }
+    
+}
+
+// MARK: - LocationsCoordinatorDelegate
+extension MoreCoordinator: LocationsCoordinatorDelegate {
+    func onLocationCoordinationComplete(coordinator: LocationsCoordinator) {
+        free(coordinator: coordinator)
+    }
+    
     
 }

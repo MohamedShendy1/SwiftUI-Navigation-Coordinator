@@ -24,13 +24,12 @@ class AccountCoordinator: BaseCoordinator<UINavigationController>, ConfirmEmailC
 
 
 //MARK: - Showing Screen
-
 extension AccountCoordinator {
     
     func showAccountScreen() {
         let viewModel = AccountView.ViewModel()
         viewModel.navDelegate = self
-        viewModel.showExitButton = false
+        viewModel.showExitButton = !embeddedInExistingNavStack
         let view = AccountView(viewModel: viewModel)
         let controller = AccountHostingController(rootView: view, viewModel: viewModel)
         controller.hidesBottomBarWhenPushed = true
@@ -38,6 +37,7 @@ extension AccountCoordinator {
         pushInitialControllerBasedOnEmbeddedNavState(controller: controller)
         
     }
+    
     
     func showingEditAccountScreen() {
         let viewModel = EditAccountView.ViewModel()

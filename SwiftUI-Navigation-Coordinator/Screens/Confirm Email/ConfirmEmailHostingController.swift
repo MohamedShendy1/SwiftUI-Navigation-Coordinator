@@ -11,7 +11,6 @@ class ConfirmEmailHostingController: HostingController<ConfirmEmailView, Confirm
 
 
 //MARK: - Lifycycle
-
 extension ConfirmEmailHostingController {
     
     override func viewDidLoad() {
@@ -21,7 +20,6 @@ extension ConfirmEmailHostingController {
 }
 
 //MARK: - Setup / Configurations
-
 private extension ConfirmEmailHostingController {
     
     
@@ -34,8 +32,8 @@ private extension ConfirmEmailHostingController {
 
 
 //MARK: - Actions
-
 extension ConfirmEmailHostingController {
+   
     @objc func onBackTapped() {
         viewModel.onBackTapped()
     }
