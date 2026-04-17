@@ -2,7 +2,7 @@
 //  AuthCoordinator.swift
 //  SwiftUI-Navigation-Coordinator
 //
-//  Created by mac on 08/03/2026.
+// Created by Mohamed Shendy  08/03/2026.
 //
 
 import UIKit
