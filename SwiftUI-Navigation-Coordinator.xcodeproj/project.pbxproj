@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04098BAC2F919CD30085068D /* UpgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04098BAB2F919CD30085068D /* UpgradeView.swift */; };
+		04098BAE2F919CE30085068D /* UpgradeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04098BAD2F919CE30085068D /* UpgradeViewModel.swift */; };
+		04098BB22F91A1570085068D /* UpgradeHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04098BB12F91A1570085068D /* UpgradeHostingController.swift */; };
+		04098BB42F91A5F80085068D /* UpgradeCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04098BB32F91A5F80085068D /* UpgradeCoordinating.swift */; };
+		04098BB62F91A9B40085068D /* LocationsHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04098BB52F91A9A60085068D /* LocationsHostingController.swift */; };
 		0490DD582F5660E800529C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DD512F5660E800529C2B /* AppDelegate.swift */; };
 		0490DD5B2F5660E800529C2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0490DD532F5660E800529C2B /* Assets.xcassets */; };
 		0490DD602F56645800529C2B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490DD5F2F56645800529C2B /* ApplicationCoordinator.swift */; };
@@ -48,6 +53,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04098BAB2F919CD30085068D /* UpgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeView.swift; sourceTree = "<group>"; };
+		04098BAD2F919CE30085068D /* UpgradeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeViewModel.swift; sourceTree = "<group>"; };
+		04098BB12F91A1570085068D /* UpgradeHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeHostingController.swift; sourceTree = "<group>"; };
+		04098BB32F91A5F80085068D /* UpgradeCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeCoordinating.swift; sourceTree = "<group>"; };
+		04098BB52F91A9A60085068D /* LocationsHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsHostingController.swift; sourceTree = "<group>"; };
 		0490DD2A2F56521500529C2B /* SwiftUI-Navigation-Coordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Navigation-Coordinator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0490DD512F5660E800529C2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0490DD532F5660E800529C2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +111,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04098BAA2F919C9E0085068D /* Upgrade */ = {
+			isa = PBXGroup;
+			children = (
+				04098BAB2F919CD30085068D /* UpgradeView.swift */,
+				04098BAD2F919CE30085068D /* UpgradeViewModel.swift */,
+				04098BB12F91A1570085068D /* UpgradeHostingController.swift */,
+			);
+			path = Upgrade;
+			sourceTree = "<group>";
+		};
 		0490DD212F56521400529C2B = {
 			isa = PBXGroup;
 			children = (
@@ -163,13 +183,14 @@
 		0490DD642F567A4100529C2B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				0490DE082F73B05800529C2B /* Confirm Email */,
 				0490DDF42F60F75600529C2B /* AccountScreens */,
-				0490DDC62F60E79F00529C2B /* More */,
-				0490DDBF2F60E6F300529C2B /* Locations */,
+				0490DE082F73B05800529C2B /* Confirm Email */,
 				0490DDB32F60D49C00529C2B /* Home */,
-				0490DDA82F5CE93000529C2B /* Register */,
+				0490DDBF2F60E6F300529C2B /* Locations */,
 				0490DD652F567A4B00529C2B /* Login */,
+				0490DDC62F60E79F00529C2B /* More */,
+				0490DDA82F5CE93000529C2B /* Register */,
+				04098BAA2F919C9E0085068D /* Upgrade */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -252,6 +273,7 @@
 		0490DDBF2F60E6F300529C2B /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				04098BB52F91A9A60085068D /* LocationsHostingController.swift */,
 				0490DDC02F60E70100529C2B /* LocationsView.swift */,
 				0490DDC22F60E70A00529C2B /* LocationsViewModel.swift */,
 			);
@@ -319,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				0490DE122F74EA8500529C2B /* ConfirmEmailCoordinating.swift */,
+				04098BB32F91A5F80085068D /* UpgradeCoordinating.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -353,7 +376,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 1640;
+				LastUpgradeCheck = 2640;
 				TargetAttributes = {
 					0490DD292F56521400529C2B = {
 						CreatedOnToolsVersion = 16.4;
@@ -396,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0490DDA42F5B682C00529C2B /* HostingController.swift in Sources */,
+				04098BB42F91A5F80085068D /* UpgradeCoordinating.swift in Sources */,
 				0490DE0C2F73B07400529C2B /* ConfirmEmailView.swift in Sources */,
 				0490DD672F567A7000529C2B /* LoginView.swift in Sources */,
 				0490DDB52F60D4B000529C2B /* HomeViewModel.swift in Sources */,
@@ -416,7 +440,9 @@
 				0490DDAE2F5CE99D00529C2B /* RegisterViewModel.swift in Sources */,
 				0490DDC82F60E7AB00529C2B /* MoreViewModel.swift in Sources */,
 				0490DE0E2F73B5A400529C2B /* ConfirmEmailHostingController.swift in Sources */,
+				04098BB22F91A1570085068D /* UpgradeHostingController.swift in Sources */,
 				0490DDC52F60E75800529C2B /* MoreCoordinator.swift in Sources */,
+				04098BB62F91A9B40085068D /* LocationsHostingController.swift in Sources */,
 				0490DE052F73A49900529C2B /* EditAccountViewModel.swift in Sources */,
 				0490DD9D2F57C60100529C2B /* PasswordField.swift in Sources */,
 				0490DDAC2F5CE96100529C2B /* RegisterView.swift in Sources */,
@@ -424,10 +450,12 @@
 				0490DE0A2F73B06C00529C2B /* ConfirmEmailViewModel.swift in Sources */,
 				0490DDBE2F60E65100529C2B /* LocationsCoordinator.swift in Sources */,
 				0490DE132F74EA8500529C2B /* ConfirmEmailCoordinating.swift in Sources */,
+				04098BAC2F919CD30085068D /* UpgradeView.swift in Sources */,
 				0490DDB22F5E31E000529C2B /* MainCoordinator.swift in Sources */,
 				0490DE102F74DD9000529C2B /* AccountCoordinator.swift in Sources */,
 				0490DE072F73ADD400529C2B /* EditAccountHostingController.swift in Sources */,
 				0490DD942F57C09E00529C2B /* EmailField.swift in Sources */,
+				04098BAE2F919CE30085068D /* UpgradeViewModel.swift in Sources */,
 				0490DE162F75FF6C00529C2B /* NotificationsNameExtensions.swift in Sources */,
 				0490DDFB2F7258CD00529C2B /* AccountViewModel.swift in Sources */,
 				0490DDC32F60E70A00529C2B /* LocationsViewModel.swift in Sources */,
@@ -472,6 +500,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -494,6 +523,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -533,6 +563,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -548,6 +579,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -558,9 +590,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SwiftUI-Navigation-Coordinator/SwiftUI_Navigation_Coordinator.entitlements";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = H6JHBU5464;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = NO;
@@ -582,11 +615,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Debug;
@@ -621,11 +657,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Release;

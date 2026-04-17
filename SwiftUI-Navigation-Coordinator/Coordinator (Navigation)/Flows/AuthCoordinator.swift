@@ -11,7 +11,8 @@ import UIKit
 protocol AuthCoordinatorDelegate: AnyObject {
     func onAuthCoordinationComplete(authCoordinator: AuthCoordinator)
 }
-class AuthCoordinator: BaseCoordinator<UINavigationController>, LoginNavDelegate {
+
+class AuthCoordinator: BaseCoordinator<UINavigationController> {
     
     weak var delegate: AuthCoordinatorDelegate?
     
@@ -22,19 +23,20 @@ class AuthCoordinator: BaseCoordinator<UINavigationController>, LoginNavDelegate
 
 
 //MARK: -  Showing Screens
-
 extension AuthCoordinator {
     
     func showLoginScreen() {
+        
         let viewModel = LoginView.ViewModel()
         viewModel.navDelegate = self
 
         let view = LoginView(viewModel: viewModel)
         let controller = HostingController(rootView: view, viewModel: viewModel)
         controller.title = "Login"
-        
         presenter.setViewControllers([controller], animated: true)
     }
+    
+    
     
     func showRegisterScreen() {
         let viewModel = RegisterView.ViewModel()
@@ -50,8 +52,21 @@ extension AuthCoordinator {
 }
 
 
+//MARK: - ConfirmEmailNavDelegate
+extension AuthCoordinator: ConfirmEmailCoordinating {
+   
+    func onConfirmEmailSubmit() {
+        showLoginScreen()
+    }
+    
+    func onConfirmEmailBackTapped() {
+        presenter.popViewController(animated: true)
+    }
+}
+
 //MARK: - LoginNavigation Delegate
-extension AuthCoordinator {
+extension AuthCoordinator: LoginNavDelegate {
+    
     func onLoginRegisterTapped() {
         showRegisterScreen()
     }
@@ -62,16 +77,21 @@ extension AuthCoordinator {
 }
 
 
+
+
+//MARK: - RegisterNavDelegate
 extension AuthCoordinator: RegisterNavDelegate {
+   
     func onRegisterComplete() {
-        showLoginScreen()
+        showConfirmEmailScreen()
     }
     
     func OnRegisterLoginTapped() {
         showLoginScreen()
     }
-    
-    
 }
+
+
+
 
 

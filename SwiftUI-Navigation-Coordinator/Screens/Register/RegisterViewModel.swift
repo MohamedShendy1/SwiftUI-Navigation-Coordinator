@@ -14,6 +14,7 @@ protocol RegisterNavDelegate: AnyObject {
     
 }
 extension RegisterView {
+    
     class ViewModel: BaseViewModel,ObservableObject {
         weak var navDelegate: RegisterNavDelegate?
         
@@ -25,8 +26,6 @@ extension RegisterView {
          var alertTitle: String = ""
          var alertMessage: String = ""
          var registerationSuccessful: Bool = false
-        
-        
             
     }
 
@@ -42,6 +41,10 @@ extension RegisterView.ViewModel {
         alertTitle = "Registeration Successfully"
         alertMessage = "An activation email has been sent to your \(email) address."
         showAlert = true
+    }
+    
+    func onRegisterComplete() {
+        navDelegate?.onRegisterComplete()
     }
     
     func onLoginTapped() {
